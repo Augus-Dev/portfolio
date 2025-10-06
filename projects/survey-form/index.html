@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Otaku's Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  </head>
+  <body>
+    <div id="sheet">
+    <header>
+      <h1 id="title">Otaku's Survey Form</h1>
+      <p class="hp">Irasshaimase <br> <small>(いらっしゃいませ)</small> </p>
+    <section class="containers">
+      <h2>What for?</h2>
+      <p id="description">With this form we pretend to create better content and more personalize, <br>for each of you!</p>
+      <p>Please help us, by answering some simple questions.</p>
+      <p class="hp">Arigatō! | ありがとう</p>
+    </section>
+    </header>
+    <main>
+      <form id="survey-form" action="https://register-demo.freecodecamp.org" method="post">
+        <section class="containers">
+        <h3>Answer the Following Questions</h3>
+        <fieldset id="personalprofile">
+          <legend>Perosnal profile</legend>
+            <label id="name-label" for="name">Name: 
+            <input type="text" name="personalprofile" id="name" placeholder="Type your full name" required>
+            </label>
+            <label id="email-label" for="email">E-mail: 
+            <input type="email" name="personalprofile" id="email" placeholder="Type your personal email" required>
+            </label>
+            <label id="number-label" for="number">Age: <input type="number" name="number" id="number" placeholder="How old are you?" min="18" max="110" required>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Otaku profile</legend>
+            <select id="dropdown" name="dropdown">
+              <option value="">Are you a...?</option>
+              <option value="1">Animé Watcher</option>
+              <option value="2">Mangá Reader</option>
+              <option value="3">Both</option>
+            </select>
+        <div id="animeprofile">
+            <p>1. How many times per week do you watch or read Otaku's content?</p>
+            <label for="once-frequency"><input type="radio" name="once" id="once-frequency" value="1"> Once</label>
+            <label for="twice-frequency"><input type="radio" name="twice" id="twice-frequency" value="2"> Twice</label>
+            <label for="three-frequency"><input type="radio" name="three" id="three-frequency" value="3"> 3x</label>
+            <label for="four-frequency"><input type="radio" name="four-five" id="four-frequency" value="4-5"> 4/5x</label>
+            <label for="six-frequency"><input type="radio" name="six" id="six-frequency" value="6-7"> Basicly everyday</label>
+            
+            <p>2. How did you entered in Otaku's world?</p>   
+                <label for="friend-started">Friend <input type="checkbox" id="friend-started" name="friend" value="Friend"></label>
+                <br><label for="family-started">Family <input type="checkbox" id="family-started" name="family" value="Family"></label>  
+                <br><label for="internet-started">Internet <input type="checkbox" id="internet-started" name="internet" value="Internet"></label>   
+                <br><label for="television-started">Television <input type="checkbox" id="television-started" name="television" value="TV"></label>  
+                <br><label for="other-started">Other <input type="text" id="other-started" name="other" placeholder="Especify"></label>
+        </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tell us. What are your favorite animes/manga and why</legend>
+                <textarea name="insparation" id="insparation" placeholder="I watch anime since 8, with Naruto. What I liked the most was his resilience and kindness..." cols="" rows="5"></textarea>
+        </fieldset>
+        </section>
+        <div id="button">
+        <button id="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+    </div>
+  </body>
+</html>

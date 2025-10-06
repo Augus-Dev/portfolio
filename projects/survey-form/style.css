@@ -1,0 +1,97 @@
+body {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+    color: black;
+    margin: auto;
+}
+
+#sheet {
+    background-color: rgba(171, 114, 204, 0.85);
+    margin-right: auto;
+    margin-left: auto;
+    border-left: 10vw rgba(190, 180, 252, 0.4) solid;
+    border-right: 10vw rgba(190, 180, 252, 0.4) solid;
+    border-top: 10vh rgba(190, 180, 252, 0.4) solid;
+    border-bottom: 10vh rgba(190, 180, 252, 0.4) solid;
+    padding: 0%;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(/Imagens/background_yourname.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-family: 'Tilt Prism', cursive;
+    text-decoration: underline;
+    font-size: 2.5rem;
+    margin-bottom: 0%;
+}
+h2 {
+    font-family: 'Tilt Prism', cursive;
+    font-size: 2rem;
+    margin-top: 0%;
+}
+.hp {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+fieldset {
+    background-color: rgba(171, 114, 204, 0.9);
+    border: dashed rgba(92, 14, 138, 1);
+}
+
+.containers {
+    border-top: 0.1rem solid rgba(190, 180, 252, 1);
+    border-bottom: 0.1rem solid rgba(190, 180, 252, 1);
+    background-color: rgba(171, 114, 204, 0.9);
+    padding: 0.2rem;
+    margin: 0.8rem;
+}
+
+#personalprofile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: justify;
+}
+#animeprofile { 
+    display: block;
+    text-align: justify;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+#button {
+    padding: 1.5vh;
+}
+button {
+   background-color: rgba(160, 100, 196, 0.9);
+   border: dashed rgb(90, 11, 136);
+   cursor: pointer;
+}
+button:hover {
+    background-color: rgb(152, 78, 196);
+}
+button:active {
+    background-color: rgb(160, 100, 196);
+}

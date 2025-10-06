@@ -1,15 +1,19 @@
 @font-face {
     font-family: 'AnkhSanctuary';
-    src: url('fonts/ankh-sanctuary-font/AnkhSanctuary-PVK0B.ttf') format('truetype');
+    src: url('../fonts/ankh-sanctuary-font/AnkhSanctuary-PVK0B.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Sterion';
-    src: url('fonts/sterion-font_texto/SterionItalic-R99PA.ttf') format('truetype');
+    src: url('../fonts/sterion-font_texto/SterionItalic-R99PA.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Miniver';
+    src: url('../fonts/Miniver-Oxanium/Miniver/Miniver-Regular.ttf');
 }
 
 body {
     background-color: rgb(38, 32, 75);
-    background-image: url(./images/cosmos.jpg);
+    background-image: url(../images/cosmos.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -29,13 +33,14 @@ a:hover {
     backdrop-filter: blur(5px);
 }
 
+/* ===== toMake ===== */
 header {
     box-sizing: border-box; 
     height: 3.5rem;
     width: 100%;
     padding: 8px;
 }
-
+/* ===== toMake ===== */
 .img-header {
     display: flex;
     justify-content: space-between;
@@ -43,7 +48,7 @@ header {
     width: 100%;
     align-items: center;
 }
-
+/* ===== toMake ===== */
 .img-header img {
     max-height: 100%;
     height: auto;
@@ -56,23 +61,17 @@ header {
 main {
     flex: 1;
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     height: 100%;
     width: 100%;
     text-align: center;
-    align-content: center;
 }
 
 h1 {
     font-size: 8rem;
     font-style: italic;
-    margin-bottom: 0;
-}
-
-p {
-    margin-top: -15px;
-    text-shadow: 2px 2px 4px rgba(255, 233, 182, 0.8);
+    margin: 0 auto;
 }
 
 ul {
@@ -83,42 +82,8 @@ ul {
     justify-content: center;
 }
 
-ul li a {
-    margin: 0 5px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+a {
     text-decoration: none;
-}
-
-a:hover {
-    border-radius: 8%;
-    border: 1px solid black;
-    padding: 8px;
-}
-
-a:hover img {
-    transform: scale(1.1);
-}
-
-a:active {
-    color: #A0A0FF;
-}
-
-a:visited {
-    color: #FFD700;
-}
-
-li img {
-    height: 4rem;
-}
-
-
-li span {
-    margin-top: 8px;
-    font-size: 0.8rem;
-    color: honeydew;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 footer {
@@ -129,4 +94,56 @@ footer {
     display: flex;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
+}
+
+/* ===== POLAROID ===== */
+.projects-collection {
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.polaroid-frame {
+    box-sizing: border-box;
+    margin: 8px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: honeydew;
+    width: 200px;
+    height: 240px;
+    text-decoration: none;
+    justify-content: center;
+}
+.polaroid-frame img {
+    border: 1px solid black;
+    width: 85%;
+    height: 70%;
+    object-fit: cover;      /* Mantém proporção */
+    margin-top: 10px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+.polaroid-caption {
+    font-size: 14px;        
+    font-family: 'Miniver', cursive;
+    margin-top: 8px;
+}
+
+.polaroid-date {
+    font-family: cursive;
+    font-size: 10px;        
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.polaroid-frame:hover {
+    transform: translateY(-5px);
+    filter: saturate(0.7) contrast(0.9) sepia(0.5);
+}
+
+.polaroid-frame:visited {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    color: #000000;
+    background-color: cornsilk;
 }

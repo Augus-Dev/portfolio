@@ -1,0 +1,67 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores inspiradas no tomate e natureza - versão pastel */
+:root {
+    --tomato-pastel: #ffb7b2;    /* Vermelho tomate suave */
+    --leaf-pastel: #c1e1c1;      /* Verde folha suave */
+    --earth-pastel: #ddc9b4;     /* Castanho terra suave */
+    --sky-pastel: #b5d8eb;       /* Azul céu suave */
+    --flower-pastel: #f9c7d5;    /* Rosa flor suave */
+    --cream: #fff9f5;            /* Fundo creme */
+    --text-soft: #5a4c42;        /* Texto suave tipo vintage */
+}
+
+body {
+    font-family: 'Pixelify Sans', cursive, sans-serif;
+    color: var(--text-soft);
+    background: linear-gradient(360deg, var(--tomato-pastel) 0%, var(--cream) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+container {
+    background: var(--cream);
+    border: 1rem solid var(--text-soft);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 2px var(--tomato-pastel);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    border: 1rem solid var(--text-soft);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.timer {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'New Courier', cursive;
+    margin: 20px 0;
+    border: 1px solid #5a4c42;
+}
+
+.mode {
+    font-size: 1.5rem;
+    color: var(--earth-pastel);
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #5a4c42;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diPomodoro App</title>
+    <link rel="icon" href="./images/relogio-logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+        <h1>Cronómetro Pomodoro</h1>
+
+        <!-- Timer Display -->
+        <div class="timer-display">
+            <div class="mode" id="mode">Clássico</div>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button id="startBtn">▶️</button>
+        <button id="pauseBtn">⏸️</button>
+        <button id="resetBtn">⏹️</button>
+        <button id="loopBtn">🔁</button>
+    </div>
+
+    <!-- Settings Button -->
+    <button class="settingsBtn" id="settingsBtn">
+        <img src="./images/settings-logo.png" alt="Settings logo button" />
+    </button>
+
+    <!-- Menu Settings-->
+    <div class="settings-nav" id="settingsNav">
+        <div class="nav-header">
+            <h2>Configurações</h2>
+            <button class="close-nav" id="closeNav"><img src="./images/close-logo.png" alt="Close logo settings button"></button>
+        </div>
+
+        <div class="nav-content">
+            <div class="setting-group">
+                <label for="focusTime">Tempo de Foco:</label>
+                <select id="focusTime" name="focusTime">
+                    <option value="15">15 minutos</option>
+                    <option value="25" selected>25 minutos</option>
+                    <option value="30">30 minutos</option>
+                    <option value="45">45 minutos</option>
+                    <option value="60">60 minutos</option>
+                    <option value="custom">Personalizado...</option>
+                </select>
+                <input type="number" id="focusTimeCustom" min="1" max="60" placeholder="10" class="custom-input" style="display: none;">
+            </div>
+    
+            <div class="setting-group">
+                <label for="breakTime">Tempo de Pausa:</label>
+                <select id="breakTime" name="breakTime">
+                    <option value="5" selected>5 minutos</option>
+                    <option value="10">10 minutos</option>
+                    <option value="15">15 minutos</option>
+                    <option value="custom">Personalizado...</option>
+                </select>
+                <input type="number" id="breakTimeCustom" min="1" max="60" placeholder="3" class="custom-input" style="display: none;">
+            </div>
+            
+            <div class="setting-group">
+                <label for="cyclesUntilLongBreak">Ciclos até à pausa longa:</label>
+                <select id="cyclesUntilLongBreak" name="cyclesUntilLongBreak">
+                    <option value="2">2 ciclos</option>
+                    <option value="3">3 ciclos</option>
+                    <option value="4" selected>4 ciclos</option>
+                    <option value="5">5 ciclos</option>
+                </select>
+            </div>
+            
+            <div class="setting-group">
+                <label for="longBreakTime">Pausa longa:</label>
+                <select id="longBreakTime" name="longBreakTime">
+                    <option value="10">10 minutos</option>
+                    <option value="15" selected>15 minutos</option>
+                    <option value="20">20 minutos</option>
+                    <option value="30">30 minutos</option>
+                    <option value="custom">Personalizado...</option>
+                </select>
+                <input type="number" id="longBreakTimeCustom" min="1" max="60" placeholder="3" class="custom-input" style="display: none;">
+            </div>
+    
+            <button id="saveSettings">Guardar</button>
+        </div>
+    </div>    
+
+    <!-- Progress -->
+    <div class="progress">
+        <div class="cycles">
+            <p>Ciclo <span id="currentCycle">1</span>/<span id="totalCycles">4</span></p>
+            <p>Próxima pausa longa em: <span id="cyclesLeft">3</span> ciclos</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

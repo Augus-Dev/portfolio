@@ -5,21 +5,21 @@
     box-sizing: border-box;
 }
 
-/* Cores inspiradas no tomate e natureza - versão pastel */
+/* Cores inspiradas no tomate e natureza envolvete - pastel */
 :root {
     --tomato-pastel: #ffb7b2;    /* Vermelho tomate suave */
     --leaf-pastel: #c1e1c1;      /* Verde folha suave */
     --earth-pastel: #ddc9b4;     /* Castanho terra suave */
     --sky-pastel: #b5d8eb;       /* Azul céu suave */
     --flower-pastel: #f9c7d5;    /* Rosa flor suave */
-    --cream: #fff9f5;            /* Fundo creme */
+    --cream: rgb(252, 241, 228);            /* Fundo creme */
     --text-soft: #5a4c42;        /* Texto suave tipo vintage */
 }
 
 body {
-    font-family: 'Pixelify Sans', cursive, sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     color: var(--text-soft);
-    background: linear-gradient(360deg, var(--tomato-pastel) 0%, var(--cream) 100%);
+    background: linear-gradient(360deg, var(--earth-pastel) 0%, var(--cream) 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -27,41 +27,215 @@ body {
     padding: 20px;
 }
 
-container {
-    background: var(--cream);
-    border: 1rem solid var(--text-soft);
-    border-radius: 15px;
-    padding: 40px;
+/* Conteúdo */
+.container {
+    background: var(--tomato-pastel);
+    border: 2px solid var(--text-soft);
+    border-radius: 8px;
+    padding: 2.5rem;
     box-shadow: 
-        0 8px 25px rgba(0, 0, 0, 0.1),
-        inset 0 0 0 2px var(--tomato-pastel);
+        0 8px 25px rgba(0, 0, 0, 0.4);
     text-align: center;
     max-width: 500px;
-    width: 100%;
+    width: 90%; /* Para se adaptar ao ecrã */
+    height: auto;
     position: relative;
 }
 
+/* ìcones e Logos */
+img {
+    width: 100%;
+    height: 100%;
+}
+
 h1 {
-    border: 1rem solid var(--text-soft);
-    margin-bottom: 20px;
+    margin: 2% 0;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 400;
+    background-color: rgba(247, 239, 230, 0.4);
+    border-radius: 8px;
+}
+
+hr {
+    margin-top: 0%;
+    margin-bottom: 5%;
+    border: 1px solid var(--text-soft);
+}
+
+/* Legenda dos tempos selecionados */
+.mode {
+    font-size: 1rem;
+    color: var(--cream);
+    background-color: #5a4c42;
+    margin-bottom: 0px;
+    font-weight: 400;
+    border: 1px solid #5a4c42;
+    padding: 4px 8px;
+    width: 90%;
+    margin-left: 5%;
 }
 
 .timer {
     font-size: 5rem;
     font-weight: 700;
-    font-family: 'New Courier', cursive;
-    margin: 20px 0;
-    border: 1px solid #5a4c42;
+    font-family:Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    border: 3px solid #5a4c42;
+    padding: 5px;
+    width: 90%;
+    margin-left: 5%;
 }
 
-.mode {
+/* Botões */
+.controls {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0.4rem;
+    gap: 0.5rem;
+}
+
+.controls button,
+.settingsBtn,
+.close-nav {
+    background: var(--cream);
+    border: 2px solid var(--text-soft);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    padding: 1%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.controls button:hover,
+.settingsBtn:hover,
+.close-nav:hover {
+    background: var(--flower-pastel);
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+.controls button:active {
+    transform: scale(0.95);
+    border: 2px solid var(--flower-pastel);
+}
+
+/* Info dos Ciclos */
+.progress {
+    margin: 2% 0;
+    padding: 15px;
+    background: var(--cream);
+    border: 2px solid var(--text-soft);
+    border-radius: 8px;
+}
+
+.cycles p {
+    font-size: 1rem;
+}
+
+/* SETTINGS Menu */
+/* posição do botão */
+.settingsBtn { 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0%;
+}
+
+.close-nav {
+    /* Posição diferente - dentro do menu */
+    position: relative;
+    top: auto;
+    right: auto;
+}
+
+.settings-nav {
+    display: none;
+    background: var(--flower-pastel);
+    border: 2px solid var(--text-soft);
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    width: 50%;
+    max-width: 400px;
+}
+
+.settings-nav.active {
+    display: block;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3% 5%;
+    padding: 0.3rem;
+    border-bottom: 1px solid var(--text-soft);
+}
+
+.nav-header h2 {
+    margin: 2% 0;
     font-size: 1.5rem;
-    color: var(--earth-pastel);
-    margin-bottom: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid #5a4c42;
+    color: var(--cream);
+    font-weight: 100;
+    margin-left: 5%;
+}
+
+/* Opções de configuração */
+.setting-group {
+    margin: 2% 5%;
+    text-align: left;
+}
+
+.setting-group label {
+    display: block;
+    margin-bottom: 2%;
+}
+
+.setting-group select,
+.setting-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--text-soft);
+    border-radius: 8px;
+    background: var(--cream);
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.setting-group select:focus,
+.setting-group input:focus {
+    outline: none;
+    border-color: var(--flower-pastel);
+    background: var(--leaf-pastel);
+}
+
+/* Botão Guardar */
+#saveSettings {
+    background: var(--cream);
+    border: 2px solid var(--text-soft);
+    border-radius: 8px;
+    margin: 2% 0;
+    padding: 5% 10%;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 5%;
+    transition: all 0.2s ease;
+}
+#saveSettings:hover {
+    background: var(--leaf-pastel);
+    transform: translateY(-2px);
+}
+
+.timer-display img {
+    height: 3rem;
+    width: 3rem;
+
 }

@@ -54,20 +54,21 @@ header {
     border-radius: 50%;
 }
 
-main {
+.coluna {
     flex: 1;
     box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4% 2%;
+    margin: 0 18%;
     text-align: center;
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 7rem;
     font-style: italic;
     margin: 0 auto;
+    text-align: center;
 }
 
 ul {
@@ -84,6 +85,13 @@ a {
 
 .homepage {
     color: honeydew;
+    justify-content: center;
+    margin: 5%;
+    width: 10rem;
+    padding: 2%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+
 }
 
 footer {
@@ -101,6 +109,7 @@ footer {
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
+    margin-bottom: 5%;
 }
 .polaroid-frame {
     box-sizing: border-box;

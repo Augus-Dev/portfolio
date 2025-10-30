@@ -1,12 +1,4 @@
-@font-face {
-    font-family: 'AnkhSanctuary';
-    src: url('fonts/ankh-sanctuary-font/AnkhSanctuary-PVK0B.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Sterion';
-    src: url('fonts/sterion-font_texto/SterionItalic-R99PA.ttf') format('truetype');
-}
-
+/* Fonts */
 body {
     background-color: rgb(38, 32, 75);
     background-image: url(./images/cosmos.jpg);
@@ -18,39 +10,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'AnkhSanctuary', 'Courier New', Courier, monospace, sans-serif;
-}
-
-header, 
-footer, 
-a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    backdrop-filter: blur(5px);
-}
-
-header {
-    box-sizing: border-box; 
-    height: 3.5rem;
-    width: 100%;
-    padding: 8px;
-}
-
-.img-header {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-}
-
-.img-header img {
-    max-height: 100%;
-    height: auto;
-    width: auto;
-    max-width: 100%;
-    background-color: antiquewhite;
-    border-radius: 50%;
+    font-family: 'Oxanium', 'Courier New', monospace;
 }
 
 main {
@@ -65,60 +25,117 @@ main {
 }
 
 h1 {
-    font-size: 8rem;
+    text-align: end;
+    font-size: 6rem;
     font-style: italic;
-    margin-bottom: 0;
+    background-color: rgba(255, 223, 186, 0.75);
+    color: #2A2356;
+    margin-top: 15%;
+    margin-left: 0%;
+    margin-right: 40%;
+    margin-bottom: 0%;
+    padding-right: 15%;
+
+    /* FORMA PONTIAGUDA */
+    clip-path: polygon(
+        0% 0%,     /* canto superior esquerdo */
+        100% 0%,    /* canto superior direito */
+        87% 100%,   /* ponta direita (5% recuo) */
+        0% 100%     /* canto inferior esquerdo */
+    );
 }
 
 p {
-    margin-top: -15px;
-    text-shadow: 2px 2px 4px rgba(255, 233, 182, 0.8);
+    text-align: end;
+    font-size: 1rem;
+    font-style: italic;
+    background-color: rgba(186, 246, 255, 0.65);
+    color: #2A2356;
+    margin-left: 0%;
+    margin-right: 51%;
+    padding: 1rem;
+    padding-right: 11%;
+
+    clip-path: polygon(
+        0% 0%,     /* canto superior esquerdo */
+        100% 0%,    /* canto superior direito */
+        95% 100%,   /* ponta direita (5% recuo) */
+        0% 100%     /* canto inferior esquerdo */
+    );
 }
 
-ul {
+/* Menu Nav e Elementos */
+.main-nav {
+    margin-top: 4rem;
+}
+
+.main-nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     display: flex;
     justify-content: center;
+    gap: 2rem;
 }
 
-ul li a {
-    margin: 0 5px;
+.main-nav ul li a {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    align-items: center;
     text-decoration: none;
+    padding: 1rem 1.2rem;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
+/* Hover */
 a:hover {
     border-radius: 8%;
     border: 1px solid black;
     padding: 8px;
 }
 
-a:hover img {
+ul, footer, 
+a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+/* Slide bar no Hover */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: rgba(255, 223, 186, 0.9);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+.main-nav ul li a:hover::after {
+    width: 80%; /* Expande 80% */
+}
+
+/* Icones e texto */
+.main-nav ul li a img {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-bottom: 0.2rem;
+    transition: transform 0.3s ease;
+}
+
+.main-nav ul li a:hover img {
     transform: scale(1.1);
 }
 
-a:active {
-    color: #A0A0FF;
-}
-
-a:visited {
-    color: #FFD700;
-}
-
-li img {
-    height: 4rem;
-}
-
-
-li span {
+.main-nav ul li span {
     margin-top: 8px;
     font-size: 0.8rem;
     color: honeydew;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease;
 }
 
 footer {
@@ -132,10 +149,3 @@ footer {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.spaceMan {
-    position: absolute;
-    width: 20vh;
-    height: auto;
-    border-radius: 100%;
-    margin: auto 150px;
-}

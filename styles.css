@@ -1,8 +1,8 @@
 /* Fonts */
 body {
-    background-color: rgb(38, 32, 75);
     background-image: url(./images/cosmos.jpg);
-    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(38, 32, 75);
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -22,6 +22,30 @@ main {
     width: 100%;
     text-align: center;
     align-content: center;
+}
+
+/* MAIN CONTENT */
+#about, 
+#projects,
+#contacts {
+    padding: 0 5rem;
+}
+
+#about {
+    margin-top: 8rem;
+    min-height: 100vh;
+    background: rgba(60, 40, 120, 0.6); /* Roxo */
+    color: rgba(186, 246, 255, 0.95); /* Azul claro */
+}
+#projets {
+    min-height: 100vh;
+    background: rgba(40, 80, 150, 0.6); /* Overlay azul */
+    color: rgba(186, 246, 255, 0.95); /* Texto azul claro */
+}
+#contacts {
+    min-height: 100vh;
+    background: rgba(20, 20, 60, 0.7); /* Azul escuro */
+    color: rgba(186, 246, 255, 0.95); /* Azul claro */
 }
 
 h1 {
@@ -66,14 +90,14 @@ p {
 
 /* Menu Nav e Elementos */
 .main-nav {
-    margin-top: 4rem;
+    margin-top: 6.5rem;
     display: inline-block;
 }
 
 .main-nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 1.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     gap: 2rem;

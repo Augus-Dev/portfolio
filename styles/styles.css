@@ -4,7 +4,7 @@
 
 /* BASICO DO WEBSITE */
 body {
-    background-image: url(./images/cosmos.jpg);
+    background-image: url(../images/cosmos.jpg);
     background-attachment: fixed;
     background-color: rgb(38, 32, 75);
     background-position: center;
@@ -75,6 +75,8 @@ main {
 }
 
 .main-nav ul {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
     list-style-type: none;
     margin: 1rem 0;
     padding: 0.5rem;
@@ -96,16 +98,11 @@ main {
 }
 
 /* Hover */
-a:hover {
+.main-nav ul li a:hover {
     border-radius: 8%;
     border: 1px solid black;
     padding: 8px;
-}
-
-ul, footer, 
-a:hover {
     background-color: rgba(0, 0, 0, 0.3);
-    color: white;
     backdrop-filter: blur(5px);
 }
 /* Slide bar no Hover */
@@ -146,6 +143,8 @@ a:hover {
 }
 
 footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
     width: 100%;
     height: auto;
     min-height: 4rem;
@@ -159,18 +158,8 @@ footer {
 
 /* SEcCOES */
 /* MAIN CONTENT */
-#about, 
-#projects,
-#contacts {
-    padding: 0 5rem;
-}
 
-/* AMPOMWOPCMW */
-#projets {
-    min-height: 100vh;
-    background: rgba(40, 80, 150, 0.6); /* Overlay azul */
-    color: rgba(186, 246, 255, 0.95); /* Texto azul claro */
-}
+
 #contacts {
     min-height: 100vh;
     background: rgba(20, 20, 60, 0.7); /* Azul escuro */

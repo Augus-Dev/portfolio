@@ -1,150 +1,90 @@
-@font-face {
-    font-family: 'AnkhSanctuary';
-    src: url('../fonts/ankh-sanctuary-font/AnkhSanctuary-PVK0B.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Miniver';
-    src: url('../fonts/Miniver-Oxanium/Miniver/Miniver-Regular.ttf');
-}
-
-body {
-    background-color: rgb(38, 32, 75);
-    background-image: url(../images/cosmos.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/* PROJETOS SECTION */
+#projects {
+    background-color: #FFB380; /* Laranja pastel */
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'AnkhSanctuary', 'Courier New', Courier, monospace, sans-serif;
+    align-items: center;
+    color: #FFF8E7 ; /* Creme polaroid */
+    margin: 20% 10%;    
+    padding: 2rem 5rem;
 }
 
-header, 
-footer, 
-a:hover {
+#projects h2 {
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+#projects h3 {
     background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    backdrop-filter: blur(5px);
-}
-
-/* ===== toMake ===== */
-header {
-    box-sizing: border-box; 
-    height: 3.5rem;
-    width: 100%;
-    padding: 8px;
-}
-/* ===== toMake ===== */
-.img-header {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-}
-/* ===== toMake ===== */
-.img-header img {
-    max-height: 100%;
-    height: auto;
-    width: auto;
-    max-width: 100%;
-    background-color: antiquewhite;
-    border-radius: 50%;
-}
-
-.coluna {
-    flex: 1;
-    box-sizing: border-box;
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 4% 2%;
-    margin: 0 18%;
-    text-align: center;
-}
-
-h1 {
-    font-size: 7rem;
+    padding: 0.8rem;
     font-style: italic;
-    margin: 0 auto;
-    text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* ===== CONTAINER PARA OS POLAROID ===== */
+.projects-container {
     display: flex;
-    justify-content: center;
-}
-
-a {
-    text-decoration: none;
-}
-
-.homepage {
-    color: honeydew;
-    justify-content: center;
-    margin: 5%;
-    width: 10rem;
-    padding: 2%;
-    background-color: rgb(0, 0, 0);
-    border-radius: 8px;
-
-}
-
-footer {
-    width: 100%;
-    height: 2.5rem;
-    font-size: 0.8em;
-    justify-content: center;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* ===== POLAROID ===== */
 .projects-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
     height: 100%;
     width: 100%;
-    flex-wrap: wrap;
-    margin-bottom: 5%;
+    margin-bottom: 2rem;
+    margin-left: -2rem;
 }
 .polaroid-frame {
     box-sizing: border-box;
-    margin: 8px;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
-    background-color: honeydew;
+    background-color: #FFF8E7;
     width: 200px;
     height: 240px;
     text-decoration: none;
     justify-content: center;
+    align-items: center;
+    border: 1px solid #666;
 }
 .polaroid-frame img {
     border: 1px solid black;
-    width: 85%;
+    width: 100%;
     height: 70%;
     object-fit: contain;
     margin-top: 10px;
     margin-bottom: 0;
     transition: all 0.3s ease;
     padding: 2px;
-    background-color: rgba(230, 230, 180, 0.2);
+    background-color: honeydew;
 }
 .polaroid-caption {
-    font-size: 14px;        
+    font-size: 14px;
+    font-weight: 400;        
     font-family: 'Miniver', cursive;
+    color: black;
     margin-top: 8px;
 }
 .polaroid-date {
     font-family: cursive;
-    font-size: 10px;        
+    font-size: 10px;   
+    font-weight: 400;      
     color: #666;
     margin-bottom: 8px;
 }
+
+.polaroid-frame a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .polaroid-frame:hover {
     transform: translateY(-5px);
     filter: saturate(0.7) contrast(0.9) sepia(0.5);

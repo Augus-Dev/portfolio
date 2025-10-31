@@ -1,6 +1,7 @@
 /* IMPORTA OUTROS CSS */
 @import url('styles-about.css');
 @import url('styles-project.css');
+@import url('styles-contacts.css');
 
 /* BASICO DO WEBSITE */
 body {
@@ -28,7 +29,7 @@ main {
     align-content: center;
 }
 
-.hero h1 {
+#hero h1 {
     text-align: end;
     font-size: 6rem;
     font-style: italic;
@@ -49,7 +50,7 @@ main {
     );
 }
 
-.hero p {
+#hero p {
     text-align: end;
     font-size: 1rem;
     font-style: italic;
@@ -142,8 +143,42 @@ main {
     transition: color 0.3s ease;
 }
 
+/* SECTIONS */
+/* SETA FIXA NO CANTO */
+.back-to-top {
+    position: fixed; /* ← FICA FIXA NO VIEWPORT */
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    z-index: 1000; /* ← FICA POR CIMA DE TUDO */
+    background: rgba(186, 246, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2A2356;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.back-to-top img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(18%) saturate(1304%) hue-rotate(203deg) brightness(93%) contrast(89%);
+}
+
+.back-to-top:hover {
+    background: rgba(255, 223, 186, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* FOOTER */
 footer {
     background-color: rgba(0, 0, 0, 0.3);
+    color: #E6F7FF;
     backdrop-filter: blur(5px);
     width: 100%;
     height: auto;
@@ -153,15 +188,4 @@ footer {
     display: flex;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
-}
-
-
-/* SEcCOES */
-/* MAIN CONTENT */
-
-
-#contacts {
-    min-height: 100vh;
-    background: rgba(20, 20, 60, 0.7); /* Azul escuro */
-    color: rgba(186, 246, 255, 0.95); /* Azul claro */
 }

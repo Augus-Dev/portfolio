@@ -1,0 +1,178 @@
+/* IMPORTA OUTROS CSS */
+@import url('styles-about.css');
+@import url('styles-project.css');
+
+/* BASICO DO WEBSITE */
+body {
+    background-image: url(./images/cosmos.jpg);
+    background-attachment: fixed;
+    background-color: rgb(38, 32, 75);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oxanium', 'Courier New', monospace;
+}
+
+main {
+    flex: 1;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+.hero h1 {
+    text-align: end;
+    font-size: 6rem;
+    font-style: italic;
+    background-color: rgba(255, 223, 186, 0.75);
+    color: #2A2356;
+    margin-top: 15%;
+    margin-left: 0%;
+    margin-right: 40%;
+    margin-bottom: 0%;
+    padding-right: 15%;
+
+    /* FORMA PONTIAGUDA */
+    clip-path: polygon(
+        0% 0%,     /* canto superior esquerdo */
+        100% 0%,    /* canto superior direito */
+        87% 100%,   /* ponta direita (5% recuo) */
+        0% 100%     /* canto inferior esquerdo */
+    );
+}
+
+.hero p {
+    text-align: end;
+    font-size: 1rem;
+    font-style: italic;
+    background-color: rgba(186, 246, 255, 0.65);
+    color: #2A2356;
+    margin-left: 0%;
+    margin-right: 51%;
+    padding: 1rem;
+    padding-right: 11%;
+
+    clip-path: polygon(
+        0% 0%,     /* canto superior esquerdo */
+        100% 0%,    /* canto superior direito */
+        95% 100%,   /* ponta direita (5% recuo) */
+        0% 100%     /* canto inferior esquerdo */
+    );
+}
+
+/* MENU NAV */
+.main-nav {
+    margin-top: 6.5rem;
+    display: inline-block;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+}
+
+.main-nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 1rem 1.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+a:hover {
+    border-radius: 8%;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+ul, footer, 
+a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+/* Slide bar no Hover */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: rgba(255, 223, 186, 0.9);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+.main-nav ul li a:hover::after {
+    width: 80%; /* Expande 80% */
+}
+
+/* Icones e texto do nav*/
+.main-nav ul li a img {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-bottom: 0.2rem;
+    transition: transform 0.3s ease;
+}
+
+.main-nav ul li a:hover img {
+    transform: scale(1.1);
+}
+
+.main-nav ul li span {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: honeydew;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    min-height: 4rem;
+    font-size: 0.8em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* SEcCOES */
+/* MAIN CONTENT */
+#about, 
+#projects,
+#contacts {
+    padding: 0 5rem;
+}
+
+/* AMPOMWOPCMW */
+#projets {
+    min-height: 100vh;
+    background: rgba(40, 80, 150, 0.6); /* Overlay azul */
+    color: rgba(186, 246, 255, 0.95); /* Texto azul claro */
+}
+#contacts {
+    min-height: 100vh;
+    background: rgba(20, 20, 60, 0.7); /* Azul escuro */
+    color: rgba(186, 246, 255, 0.95); /* Azul claro */
+}

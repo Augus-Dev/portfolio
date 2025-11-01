@@ -1,42 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <title>Landing Page | TOP</title>
+    <title>myMémoires</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.png" />
   </head>
   <body>
-    >
     <header>
-      <img src="" alt="logo" />
-      <div class="links-das-seccoes">
-        <a href="#secX">linkSec2</a>
-        <a href="#secX">linkSec3</a>
-        <a href="#secX">linkSec4</a>
-      </div>
+      <img src="favicon.png" alt="logo" />
+      <nav class="seccoes-links">
+        <a href="#sec2-sobre">Sobre nós</a>
+        <a href="../../projects/photo-gallery/index.html" target="_blank"
+          >Exemplo</a
+        >
+        <a href="#sec3-contatos">Contatos</a>
+      </nav>
     </header>
     <main>
-      <section id="hero-section">
+      <section id="sec1-hero">
         <div class="hero-text">
           <h1><i>myMémoires</i></h1>
-          <p>
-            Dedicado a quem procura um porto seguro para humanizar as memórias
-            perdidas no mar da galeria?
-          </p>
-          <button>/*Signup style*/</button>
+          <p>Um porto seguro para as memórias perdidas no 'Mar Galeria'</p>
+          <a href="./form/index.html" class="signup-btn">Registe-se</a>
         </div>
         <img
-          src=""
+          src="fotos.jpg"
           alt="Imagem alusiva a um mar de fotogafias, onde só queremos recuperar parte delas"
         />
       </section>
-      <section id="sec2">
-        /*Imagens a ilustrar as molduras que oferecemos*/
+
+      <section id="sec2-sobre">
+        <h2>Quem somos</h2>
+        <p>
+          myMémoires é uma ferramenta online que permite guardar as fotografias
+          em álbuns digitais.
+        </p>
+        <p>
+          Acreditamos que as nossas memórias merecem ser representadas de forma
+          apropriada além do depósito de fotografias a que chamamos 'Galeria'
+        </p>
+        <p>
+          A nossa plataforma oferece modelos de álbuns predefinidos para que
+          possa selecionar, posicionar e organizar de forma mais personalizada
+          as fotografias que contam a sua história.
+        </p>
+
+        <div class="modelos-container">
+          <div class="modelo">
+            <img
+              src="modelo-classico-simples.jfif"
+              alt="Modelo Clássico Simples"
+            />
+            <span>Clássico Simples</span>
+          </div>
+          <div class="modelo">
+            <img
+              src="modelo-classico-quadruplo.jfif"
+              alt="Modelo Clássico Quadruplo"
+            />
+            <span>Clássico Quadruplo</span>
+          </div>
+          <div class="modelo">
+            <img src="modelo-polaroid.jfif" alt="Modelo Estilo Polaroid" />
+            <span>Estilo Polaroid</span>
+          </div>
+          <div class="modelo">
+            <img src="modelo-temporal.jfif" alt="Modelo Linha Temporal" />
+            <span>Linha Temporal</span>
+          </div>
+        </div>
       </section>
-      <section id="sec3">/*Uma quote apropriada*/</section>
-      <section id="sec4">
-        /*Signup para guardar o progresso das molduras*/
+
+      <section id="sec3-quote">
+        <p>"Só se vê bem com o coração. O essencial é invisível aos olhos."</p>
+        <cite>- Antoine de Saint-Exupéry, O Pequeno Príncipe</cite>
+      </section>
+
+      <section id="sec4-contatos">
+        <h2>Contatos</h2>
+        <div>
+          <address class="contacto-fisico">
+            <h3>Deseja imprimir? Visite-nos</h3>
+            <p>
+              📫 <span>Rua das Memórias, 123</span><br /><span
+                >1000-001 Lisboa</span
+              >
+            </p>
+            <p>📞 <a href="tel:+351912345678">+351 912 345 678</a></p>
+            <p><a href="mailto:your@email.com">Email: your@email.com</a></p>
+          </address>
+
+          <div class="contacto-digital">
+            <h3>Acompanhe o nosso trabalho</h3>
+            <div class="redes-sociais">
+              <a
+                href="https://instagram.com/mymemoires"
+                target="_blank"
+                rel="noopener"
+                ><img src="insta.png" alt="Conta do instagram"
+              /></a>
+              <a
+                href="https://pinterest.com/mymemoires"
+                target="_blank"
+                rel="noopener"
+                ><img src="pinterest.png" alt="conta do pinterest"
+              /></a>
+              <a
+                href="https://vsco.co/mymemoires"
+                target="_blank"
+                rel="noopener"
+                ><img src="vsco.png" alt="Conta do VSCO"
+              /></a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>Copyright © Augus Dev 2025</footer>

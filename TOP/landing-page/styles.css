@@ -266,3 +266,26 @@ footer {
     padding: 1rem;
   }
 }
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #667eea;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background: #764ba2;
+    transform: translateY(-3px);
+}
+
+.back-to-top img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Torna a seta branca */
+}

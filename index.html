@@ -1,203 +1,283 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
+  <head>
     <title>Augus Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" href="images/acehat_smyleUp.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" href="images/acehat_smyleUp.png" />
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Miniver&family=Oxanium:wght@200..800&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Michroma&family=Miniver&family=Oxanium:wght@200..800&display=swap");
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <h1>Augus</h1>
-            <p class="tagline">Full-Stack Dev Aspiring</p>
+      <!-- Hero Section -->
+      <section id="hero">
+        <h1>Augus</h1>
+        <p class="tagline">Full-Stack Dev Aspiring</p>
+      </section>
+
+      <!-- Nav menu -->
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="#projets">
+              <img
+                src="images/projects_lightMode.png"
+                alt="Ícone de projetos"
+              />
+              <span>Projets</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              <img src="images/about_lightMode.png" alt="Ícone sobre mim" />
+              <span>Who am I</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contacts">
+              <img src="images/contact_lightMode.png" alt="Ícone contactos" />
+              <span>Contacts</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Seta scroll return menu -->
+      <a href="#hero" class="back-to-top">
+        <img id="seta" src="images/return-menu.png" alt="Arrow to menu page" />
+      </a>
+
+      <!-- Conteudo das seccoes (para ser single-page) -->
+      <div class="all-sections">
+        <!-- ABOUT ME -->
+        <section id="about">
+          <h2>Who am I</h2>
+          <hr />
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                I come from a Biomedical Sciences background, but my curiosity
+                for technology and data led me into programming.
+              </p>
+              <p>
+                I’m now completing a Master’s in Bioinformatics and
+                Computational Biology at ULisboa, where I’ve been applying
+                coding and data-driven thinking to solve scientific problems.
+              </p>
+              <p id="p-extendido">
+                Alongside my studies, I’m building full-stack development skills
+                through personal projects and continuous learning.
+              </p>
+            </div>
+            <img
+              src="images/avatar.png"
+              alt="My avatar in working environment"
+            />
+          </div>
+          <h3>Technical Skills</h3>
+          <div class="skills-container">
+            <div class="skills-column">
+              <ul>
+                <li>Linux & Bash</li>
+                <li>Python</li>
+                <li>R</li>
+                <li>SQL</li>
+                <li>Java</li>
+                <li>Bioinformatics</li>
+              </ul>
+            </div>
+            <div class="skills-column">
+              <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Git & GitHub</li>
+                <li>DevOps</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
-        <!-- Nav menu -->
-        <nav class="main-nav">
-            <ul>
-                <li>
-                    <a href="#projets">
-                        <img src="images/projects_lightMode.png" alt="Ícone de projetos">
-                        <span>Projets</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about">
-                        <img src="images/about_lightMode.png" alt="Ícone sobre mim">
-                        <span>Who am I</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#contacts">
-                        <img src="images/contact_lightMode.png" alt="Ícone contactos">
-                        <span>Contacts</span>
-                    </a>
-                </li>
+        <!-- PROJETOS -->
+        <section id="projects">
+          <!-- PROJETOS 'ABUM'-->
+          <h2>Projects Collection</h2>
+          <!-- PROJETOS PESSOAIS -->
+          <div class="projects-container">
+            <h3>Personal Projects</h3>
+            <ul class="projects-collection">
+              <li class="polaroid-frame">
+                <a
+                  href="./TOP/landing-page/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="./TOP/landing-page/favicon.png" />
+                  <div class="polaroid-caption">myMémoires</div>
+                  <div class="polaroid-date">Nov 2025</div>
+                </a>
+              </li>
+
+              <li class="polaroid-frame">
+                <a
+                  href="./pomodoro-app/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/pomodoro-tech.png" />
+                  <div class="polaroid-caption">Pomodoro App</div>
+                  <div class="polaroid-date">Oct 2025</div>
+                </a>
+              </li>
+
+              <li class="polaroid-frame">
+                <a
+                  href="./survey-form/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/survey-form.png" />
+                  <div class="polaroid-caption">Survey Form</div>
+                  <div class="polaroid-date">Jun 2023</div>
+                </a>
+              </li>
             </ul>
-        </nav>
+          </div>
+          <!-- PROJETOS CURSOS -->
+          <div class="projects-container">
+            <h3>Courses Projects</h3>
+            <ul class="projects-collection">
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/accessibility-quiz/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/quiz.png" />
+                  <div class="polaroid-caption">Accessibility Quiz</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/balance-sheet/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/balance-sheet.png" />
+                  <div class="polaroid-caption">Balance Sheet</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/cafe-menu/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/menu.png" />
+                  <div class="polaroid-caption">Café Menu</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/cat-photo-app/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/app.png" />
+                  <div class="polaroid-caption">Cat Photo App</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/colored-markers/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/colored-markers.png" />
+                  <div class="polaroid-caption">Colored Markers</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/nutrition-label/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/nutrition-label.png" />
+                  <div class="polaroid-caption">Nutrition Label</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/photo-gallery/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/photo-gallery.png" />
+                  <div class="polaroid-caption">Photo Gallery</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/rothko-art/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/rothko-art.png" />
+                  <div class="polaroid-caption">Rothko Art</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/signup-page/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/signup-page.png" />
+                  <div class="polaroid-caption">Signup Page</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+              <li class="polaroid-frame">
+                <a
+                  href="./projects/tribute-page/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/tribute-page.png" />
+                  <div class="polaroid-caption">Tribute Page</div>
+                  <div class="polaroid-date">Jan 2025</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-        <!-- Seta scroll return menu -->
-        <a href="#hero" class="back-to-top">
-            <img id="seta" src="images/return-menu.png" alt="Arrow to menu page"/> 
-        </a>
-
-        <!-- Conteudo das seccoes (para ser single-page) -->
-        <div class="all-sections">
-            <!-- ABOUT ME -->
-            <section id="about">
-                <h2>Who am I</h2>
-                <hr>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I come from a Biomedical Sciences background, but my curiosity for technology and data led me into programming.</p>
-                        <p>I’m now completing a Master’s in Bioinformatics and Computational Biology at ULisboa, where I’ve been applying coding and data-driven thinking to solve scientific problems.</p>
-                        <p id="p-extendido">Alongside my studies, I’m building full-stack development skills through personal projects and continuous learning.</p>
-                    </div>
-                    <img src="images/avatar.png" alt="My avatar in working environment">    
-                </div>
-                    <h3>Technical Skills</h3>
-                    <div class="skills-container">
-                        <div class="skills-column">
-                            <ul>
-                                <li>Linux & Bash</li>
-                                <li>Python</li>
-                                <li>R</li>
-                                <li>SQL</li>
-                                <li>Java</li>
-                                <li>Bioinformatics</li>
-                            </ul>
-                        </div>                   
-                        <div class="skills-column">
-                            <ul>
-                                <li>HTML & CSS</li>
-                                <li>JavaScript</li>
-                                <li>Git & GitHub</li>
-                                <li>DevOps</li>
-                            </ul> 
-                        </div>
-                    </div>
-            </section>
-            
-            <!-- PROJETOS -->
-            <section id="projects">
-                <!-- PROJETOS 'ABUM'-->
-                <h2>Projects Collection</h2>
-                <!-- PROJETOS PESSOAIS -->
-                <div class="projects-container">
-                    <h3>Personal Projects</h3>
-                    <ul class="projects-collection">
-                        <li class="polaroid-frame">
-                            <a href="./pomodoro-app/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/pomodoro-tech.png">
-                                <div class="polaroid-caption">Pomodoro App</div>
-                                <div class="polaroid-date">Oct 2025</div>
-                            </a>
-                        </li>
-                        
-                        <li class="polaroid-frame">
-                            <a href="./survey-form/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/survey-form.png">
-                                <div class="polaroid-caption">Survey Form</div>
-                                <div class="polaroid-date">Jun 2023</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- PROJETOS CURSOS -->
-                <div class="projects-container">
-                    <h3>Courses Projects</h3>
-                    <ul class="projects-collection">
-                        <li class="polaroid-frame">
-                            <a href="./projects/accessibility-quiz/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/quiz.png">
-                                <div class="polaroid-caption">Accessibility Quiz</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/balance-sheet/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/balance-sheet.png">
-                                <div class="polaroid-caption">Balance Sheet</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/cafe-menu/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/menu.png">
-                                <div class="polaroid-caption">Café Menu</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/cat-photo-app/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/app.png">
-                                <div class="polaroid-caption">Cat Photo App</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/colored-markers/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/colored-markers.png">
-                                <div class="polaroid-caption">Colored Markers</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/nutrition-label/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/nutrition-label.png">
-                                <div class="polaroid-caption">Nutrition Label</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/photo-gallery/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/photo-gallery.png">
-                                <div class="polaroid-caption">Photo Gallery</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/rothko-art/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/rothko-art.png">
-                                <div class="polaroid-caption">Rothko Art</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/signup-page/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/signup-page.png">
-                                <div class="polaroid-caption">Signup Page</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                        <li class="polaroid-frame">
-                            <a href="./projects/tribute-page/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/tribute-page.png">
-                                <div class="polaroid-caption">Tribute Page</div>
-                                <div class="polaroid-date">Jan 2025</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="contacts">
-                <h2>Contact</h2>
-                <p><a href="mailto:auguzdev@gmail.com">Email: auguzdev@gmail.com</a></p>
-                <p><a href="https://github.com/Augus-Dev">GitHub: github.com/Augus-Dev</a></p>
-            </section>
-        </div>
+        <section id="contacts">
+          <h2>Contact</h2>
+          <p>
+            <a href="mailto:auguzdev@gmail.com">Email: auguzdev@gmail.com</a>
+          </p>
+          <p>
+            <a href="https://github.com/Augus-Dev"
+              >GitHub: github.com/Augus-Dev</a
+            >
+          </p>
+        </section>
+      </div>
     </main>
-    
-    <footer>
-        © 2025 | Augus Portfolio
-    </footer>
-</body>
+
+    <footer>© 2025 | Augus Portfolio</footer>
+  </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🎮 FizzBuzz Game</h1>
+    <p>Enter a number and see the FizzBuzz magic!</p>
+    
+    <div id="output"></div>
+    <button id="restartBtn" style="display: none;">Play Again</button>
+
+    <script>
+        function playFizzBuzz() {
+            let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+            const output = document.getElementById('output');
+            const restartBtn = document.getElementById('restartBtn');
+            
+            output.innerHTML = "";
+            
+            if (isNaN(answer)) {
+                output.innerHTML = "<p>Please enter a valid number!</p>";
+            } else {
+                for (let i = 1; i <= answer; i++) {
+                    if (i % 3 === 0 && i % 5 === 0) {
+                        output.innerHTML += "<p>FizzBuzz</p>";
+                    } else if (i % 3 === 0) {
+                        output.innerHTML += "<p>Fizz</p>";
+                    } else if (i % 5 === 0) {
+                        output.innerHTML += "<p>Buzz</p>";
+                    } else {
+                        output.innerHTML += "<p>" + i + "</p>";
+                    }
+                }
+            }
+            
+            restartBtn.style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            playFizzBuzz();
+            
+            document.getElementById('restartBtn').addEventListener('click', function() {
+                playFizzBuzz();
+            });
+        });
+    </script>
+</body>
+</html>
